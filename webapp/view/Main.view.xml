@@ -1,0 +1,98 @@
+<mvc:View
+   xmlns:core="sap.ui.core"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:c="sap.ui.commons"
+   xmlns="sap.m"
+   xmlns:l="sap.ui.layout"
+   xmlns:html="http://www.w3.org/1999/xhtml"
+   xmlns:t="sap.ui.table"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:comp="manageCheckList.component"
+   controllerName="manageCheckList.controller.Main">
+   <Page title="{i18n>manageCheckList.view.title}" class="myPage" showHeader="true" enableScrolling="false" showNavButton="true" navButtonPress="toBackPage">
+      <headerContent>
+         <Label text="{i18n>manageCheckList.view.user.label}" class="sapUiTinyMarginEnd"/>
+         <Label text="{info>/user/name}" class="sapUiMediumMarginEnd whiteText"/>
+         <Button press="logOff" icon="sap-icon://log"/>
+         <Image id="DLLogo" class="DLLogo" src="images/Braun.png" densityAware="false" height="65%"/>
+      </headerContent>
+      <content>
+         <VBox class="vboxTotal">
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="hboxHeader">
+               <Input id="itemInput" type="Text" placeholder="{i18n&gt;manageCheckList.view.checklists.placeholderItem}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="handleValueHelp" width="30vw"/>
+               <Select id="typeInspSelect" showSecondaryValues="true" width="10vw" change="onChangeSelectTypeInsp">
+                  <items>
+                     <core:ListItem key="EOL" text="EOL" additionalText="End Of Line - Quarantine"/>
+                     <core:ListItem key="STAT" text="STAT" additionalText="Statistic"/>
+                  </items>
+               </Select>
+               <Button icon="sap-icon://search" text="{i18n&gt;manageCheckList.view.checklists.search}" width="25vw" type="Accept" press="onSearchPress"/>
+               <Label text="DC: {info>/dc_group}" />
+            </HBox>
+            <html:hr/>
+            <HBox alignItems="Center" justifyContent="SpaceBetween" class="hboxHeader">
+              <Button icon="sap-icon://refresh" type="Default" press="onClearFilterSort"/>
+               <Button icon="sap-icon://excel-attachment" text="{i18n&gt;manageCheckList.view.checklists.exportCSV}" width="10vw" type="Default" press="onEsportaCSVPress"/>
+               <Button icon="sap-icon://delete" text="{i18n&gt;manageCheckList.view.checklists.removeCheck}" width="25vw" type="Reject" press="onRemovePress" enabled="{= ${info>/dc_group} !== ''}"/>
+               <Button icon="sap-icon://add-activity" text="{i18n&gt;manageCheckList.view.checklists.addCheck}" width="25vw" type="Accept" press="onAddPress" enabled="{= ${info>/dc_group} !== ''}"/>
+               <Button icon="sap-icon://copy" text="{i18n&gt;manageCheckList.view.checklists.copyCheckList}" width="10vw" type="Default" press="onCopyPress" enabled="{= ${info>/dc_group} !== ''}"/>
+            </HBox>
+            <t:Table class="classTable" rowActionCount="1" id="tabellaChecklists" rows="{/}" selectionBehavior="RowSelector" selectionMode="MultiToggle" rowHeight="48px" visibleRowCount="15" rowSelectionChange="onRowSelectionChange" sort="onSortAndFilter" filter="onSortAndFilter" enableSelectAll="false">
+              <t:rowSettingsTemplate>
+					<t:RowSettings highlight="{STATUS_ROW_TABLE}"/>
+				</t:rowSettingsTemplate>
+        <t:rowActionTemplate>
+          <t:RowAction visible="{EDITABLE_SEQUENCE}">
+          <t:RowActionItem icon="sap-icon://edit" press="onPressEditParam"/>
+        </t:RowAction>
+      </t:rowActionTemplate>
+               <t:columns>
+                  <t:Column sortProperty="SEQUENCE" filterProperty="SEQUENCE" width="5%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.SEQUENCE}"/>
+                     <t:template>
+                        <Input type="Number" value="{SEQUENCE}" change="onSequenceChange" enabled="{EDITABLE_SEQUENCE}"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="PARAMETER_NAME" filterProperty="PARAMETER_NAME" width="18%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.PARAMETER_NAME}"/>
+                     <t:template>
+                        <Text text="{PARAMETER_NAME}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="DESCRIPTION" filterProperty="DESCRIPTION" width="18%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.DESCRIPTION}"/>
+                     <t:template>
+                        <Text text="{DESCRIPTION}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="PROMPT" filterProperty="PROMPT" width="18%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.PROMPT}"/>
+                     <t:template>
+                        <Text text="{PROMPT}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="DATA_TYPE_DISPLAY" filterProperty="DATA_TYPE_DISPLAY" width="10%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.DATA_TYPE}"/>
+                     <t:template>
+                        <Text text="{DATA_TYPE_DISPLAY}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="MIN_VALUE" filterProperty="MIN_VALUE" width="10%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.MIN_VALUE}"/>
+                     <t:template>
+                        <Text text="{MIN_VALUE}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+                  <t:Column sortProperty="MAX_VALUE" filterProperty="MAX_VALUE" width="10%">
+                     <Label text="{i18n&gt;manageCheckList.view.tabellaChecklists.MAX_VALUE}"/>
+                     <t:template>
+                        <Text text="{MAX_VALUE}" class="blackText"/>
+                     </t:template>
+                  </t:Column>
+
+               </t:columns>
+            </t:Table>
+         </VBox>
+      </content>
+   </Page>
+</mvc:View>

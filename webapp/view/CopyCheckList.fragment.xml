@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>manageCheckList.fragmentCopyCheckList.copyCheckList}" contentWidth="40vw">
+		<content class="sapUiTinyMargin">
+      <VBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label required="true" text="{i18n>manageCheckList.fragmentCopyCheckList.FINISHED_PRODUCT}:"/>
+            <HBox width="10px" />
+						<Input id="itemInputCopy" type="Text" placeholder="{i18n&gt;manageCheckList.view.checklists.placeholderItem}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="handleValueHelp" width="30vw"/>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label required="true" text="{i18n>manageCheckList.fragmentCopyCheckList.TYPE_INSPECTION}:"/>
+            <HBox width="10px" />
+						<Select id="typeInspSelectCopy" showSecondaryValues="true" width="10vw">
+							 <items>
+									<core:ListItem key="EOL" text="EOL" additionalText="End Of Line - Quarantine"/>
+									<core:ListItem key="STAT" text="STAT" additionalText="Statistic"/>
+							 </items>
+						</Select>
+          </HBox>
+
+      </VBox>
+		<!--	<TextArea width="100%" maxLength="300" placeholder="{i18n>manageCheckList.view.addCheckChecklist.placeholder}" value="{/NEWCHECK}"/> -->
+		</content>
+		<beginButton>
+			<Button icon="sap-icon://copy" text="{i18n>manageCheckList.fragmentCopyCheckList.copy}" type="Accept" press="onCopyCheckListBegin" width="10vw"/>
+		</beginButton>
+		<endButton>
+			<Button icon="sap-icon://undo" text="{i18n>manageCheckList.fragmentCopyCheckList.cancel}" type="Reject" press="onCopyCheckListEnd" width="10vw"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
