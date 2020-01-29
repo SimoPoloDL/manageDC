@@ -28,9 +28,9 @@
             <HBox width="10px" />
             <Select selectedKey="{modelAdd>/DATA_TYPE}">
                <items>
-                  <core:ListItem key="T" text="Text"/>
-                  <core:ListItem key="N" text="Numeric"/>
-                  <core:ListItem key="B" text="Boolean"/>
+                  <core:ListItem key="T" text="{i18n>manageCheckList.fragmentAddCheckChecklist.text}"/>
+                  <core:ListItem key="N" text="{i18n>manageCheckList.fragmentAddCheckChecklist.numeric}"/>
+                  <core:ListItem key="B" text="{i18n>manageCheckList.fragmentAddCheckChecklist.boolean}"/>
                </items>
             </Select>
           </HBox>

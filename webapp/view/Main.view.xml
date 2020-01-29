@@ -29,16 +29,16 @@
                      <core:ListItem key="LAS" text="LAS" additionalText="{i18n&gt;manageCheckList.view.checklists.laserCheck}"/>
                   </items>
                </Select>
-               <Button icon="sap-icon://search" text="{i18n&gt;manageCheckList.view.checklists.search}" width="25vw" type="Accept" press="onSearchPress"/>
-               <Label text="DC: {info>/dc_group}" />
+               <Button icon="sap-icon://search" text="{i18n&gt;manageCheckList.view.checklists.search}" width="15vw" type="Accept" press="onSearchPress"/>
+               <Label text="{i18n&gt;manageCheckList.view.checklists.dc}: {info>/dc_group}" />
             </HBox>
             <html:hr/>
             <HBox alignItems="Center" justifyContent="SpaceBetween" class="hboxHeader">
               <Button icon="sap-icon://refresh" type="Default" press="onClearFilterSort"/>
-               <Button icon="sap-icon://excel-attachment" text="{i18n&gt;manageCheckList.view.checklists.exportCSV}" width="10vw" type="Default" press="onEsportaCSVPress"/>
-               <Button icon="sap-icon://delete" text="{i18n&gt;manageCheckList.view.checklists.removeCheck}" width="25vw" type="Reject" press="onRemovePress" enabled="{= ${info>/dc_group} !== ''}"/>
-               <Button icon="sap-icon://add-activity" text="{i18n&gt;manageCheckList.view.checklists.addCheck}" width="25vw" type="Accept" press="onAddPress" enabled="{= ${info>/dc_group} !== ''}"/>
-               <Button icon="sap-icon://copy" text="{i18n&gt;manageCheckList.view.checklists.copyCheckList}" width="10vw" type="Default" press="onCopyPress" enabled="{= ${info>/dc_group} !== ''}"/>
+               <Button icon="sap-icon://excel-attachment" text="{i18n&gt;manageCheckList.view.checklists.exportCSV}" width="15vw" type="Default" press="onEsportaCSVPress"/>
+               <Button icon="sap-icon://delete" text="{i18n&gt;manageCheckList.view.checklists.removeCheck}" width="15vw" type="Reject" press="onRemovePress" enabled="{= ${info>/dc_group} !== ''}"/>
+               <Button icon="sap-icon://add-activity" text="{i18n&gt;manageCheckList.view.checklists.addCheck}" width="15vw" type="Accept" press="onAddPress" enabled="{= ${info>/dc_group} !== ''}"/>
+               <Button icon="sap-icon://copy" text="{i18n&gt;manageCheckList.view.checklists.copyCheckList}" width="15vw" type="Default" press="onCopyPress" enabled="{= ${info>/dc_group} !== ''}"/>
             </HBox>
             <t:Table class="classTable" rowActionCount="1" id="tabellaChecklists" rows="{/}" selectionBehavior="RowSelector" selectionMode="MultiToggle" rowHeight="48px" visibleRowCount="15" sort="onSortAndFilter" filter="onSortAndFilter" enableSelectAll="false">
                <t:columns>
