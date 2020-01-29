@@ -5,8 +5,8 @@
 	module.exports = function (grunt) {
 
 		var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
-		var user = 'POLONIAS';
-		var psw = 'Stracan2019';
+		var user = 'eservices';
+		var psw = 'ab123456';
 		var Auth = 'Basic ' + Buffer.from(user+":"+psw).toString('base64');
 
 		grunt.initConfig({
@@ -16,7 +16,7 @@
 				bower_components: 'bower_components'
 			},
 			app: {
-				prefix: "oee_history",
+				prefix: "manageCheckList",
 				version: "1.0.0"
 			},
 			jshint: {
@@ -50,16 +50,16 @@
 				dist: {},
 				proxies: [{
 						context: "/XMII/Runner", // When the url contains this...
-						host: "10.152.200.1", // Proxy to this host
-						port: 54000,
+						host: "172.19.112.151", // Proxy to this host
+						port: 51000,
 						changeOrigin: true,
 						headers: {
 							"Authorization": Auth
 						}
 					}, {
 						context: "/XMII/Illuminator", // When the url contains this...
-						host: "10.152.200.1", // Proxy to this host
-						port: 54000,
+						host: "172.19.112.151", // Proxy to this host
+						port: 51000,
 						changeOrigin: true,
 						headers: {
 							"Authorization": Auth

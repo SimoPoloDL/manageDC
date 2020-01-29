@@ -1,0 +1,57 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>manageCheckList.fragmentAddCheckChecklist.addCheckChecklist}" contentWidth="40vw">
+		<content class="sapUiTinyMargin">
+      <VBox>
+        <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+          <Label required="true" text="{i18n>manageCheckList.fragmentAddCheckChecklist.PARAMETER_NAME}:"/>
+          <HBox width="10px" />
+          <Input value="{modelAdd>/PARAMETER_NAME}" change="onChangeParName"/>
+        </HBox>
+
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label text="{i18n>manageCheckList.fragmentAddCheckChecklist.DESCRIPTION}:"/>
+            <HBox width="10px" />
+            <Input value="{modelAdd>/DESCRIPTION}"/>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label required="true" text="{i18n>manageCheckList.fragmentAddCheckChecklist.PROMPT}:"/>
+            <HBox width="10px" />
+            <Input value="{modelAdd>/PROMPT}"/>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label required="true" text="{i18n>manageCheckList.fragmentAddCheckChecklist.SEQUENCE}:"/>
+            <HBox width="10px" />
+            <Input type="Number" value="{modelAdd>/SEQUENCE}"/>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label required="true" text="{i18n>manageCheckList.fragmentAddCheckChecklist.DATA_TYPE}:"/>
+            <HBox width="10px" />
+            <Select selectedKey="{modelAdd>/DATA_TYPE}">
+               <items>
+                  <core:ListItem key="T" text="Text"/>
+                  <core:ListItem key="N" text="Numeric"/>
+                  <core:ListItem key="B" text="Boolean"/>
+               </items>
+            </Select>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label text="{i18n>manageCheckList.fragmentAddCheckChecklist.MIN_VALUE}:"/>
+            <HBox width="10px" />
+            <Input type="Number" value="{modelAdd>/MIN_VALUE}" enabled="{= ${modelAdd>/DATA_TYPE} === 'N'}"/>
+          </HBox>
+          <HBox justifyContent="Center" alignItems="Center" class="hboxAddCheck">
+            <Label text="{i18n>manageCheckList.fragmentAddCheckChecklist.MAX_VALUE}:"/>
+            <HBox width="10px" />
+            <Input type="Number" value="{modelAdd>/MAX_VALUE}" enabled="{= ${modelAdd>/DATA_TYPE} === 'N'}"/>
+          </HBox>
+      </VBox>
+		<!--	<TextArea width="100%" maxLength="300" placeholder="{i18n>manageCheckList.view.addCheckChecklist.placeholder}" value="{/NEWCHECK}"/> -->
+		</content>
+		<beginButton>
+			<Button icon="sap-icon://accept" text="{i18n>manageCheckList.fragmentAddCheckChecklist.confirm}" type="Accept" press="onAddCheckChecklistBegin" width="10vw"/>
+		</beginButton>
+		<endButton>
+			<Button icon="sap-icon://undo" text="{i18n>manageCheckList.fragmentAddCheckChecklist.cancel}" type="Reject" press="onAddCheckChecklistEnd" width="10vw"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,9 +1,9 @@
 {
-    "name": "openui5skeleton",
-    "description": "openui5skeleton",
+    "name": "manageCheckList",
+    "description": "Gestione Data Collection",
     "main": "index.html",
     "authors": [
-        "Antonio Di Fluri"
+        "Alberto Pilato"
     ],
     "license": "ISC",
     "homepage": "",

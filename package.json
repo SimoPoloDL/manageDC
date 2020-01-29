@@ -1,7 +1,7 @@
 {
-    "name": "gestioneCalendario",
+    "name": "manageCheckList",
     "version": "1.0.0",
-    "description": "Calendario @ Luxottica",
+    "description": "Gestione Data Collection",
     "main": "index.html",
     "directories": {
         "test": "test"
@@ -13,7 +13,7 @@
         "clean": "grunt clean",
         "dist": "grunt dist"
     },
-    "author": "Luca Togno",
+    "author": "Alberto Pilato",
     "license": "MIT",
     "devDependencies": {
         "grunt": "^0.4.5",

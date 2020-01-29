@@ -1,0 +1,380 @@
+
+.myPage .tmpBorder
+{
+    border-width: 1px;
+
+}
+
+.myPage .toolBar
+{
+    border-bottom-width: thin;
+    border-bottom-style: inset;
+    border-bottom-color: lightgray;
+
+    border-top-width: thin;
+    border-top-style: inset;
+    border-top-color: lightgray;
+}
+
+.myPage .DLLogo
+{
+    display: inline-block;
+    margin-right: 38px;
+    margin-left: 38px;
+    padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.myPage .sapMLabel
+{
+    font-size: 1.1rem;
+}
+
+.myPage .sapMLabel .whiteText
+{
+    color: white;
+}
+
+.myPage .sapMLabel .blackText
+{
+    color: black;
+}
+
+.myPage .sapMText
+{
+    font-size: 1.4rem;
+}
+
+.myPage .sapMText .blackText
+{
+    color: black;
+}
+
+.myPage .sapMListTbl .sapMText
+{
+    color: black;
+}
+
+.myPage .sapMTitleStyleAuto {
+    font-size: 2rem;
+}
+
+.myDialog .sapMLabel
+{
+    font-size: 1.6rem;
+}
+
+.myDialog .sapMLabel.whiteText
+{
+    color: white;
+}
+
+.myDialog .sapMLabel.blackText
+{
+    color: black;
+}
+
+.myDialog .sapMText {
+    font-size: 2.0rem;
+    color: black;
+}
+
+.myDialog .sapMFooter-CTX .sapMBtn .sapMBtnContent
+{
+    font-size: 2.0rem;
+}
+
+.myMessageDialog
+{
+    font-size: 1.7rem
+}
+
+@media screen and (max-width: 1450px) {
+    .myPage .podHeader .sapMLabel {
+        font-size: 1.2rem;
+    }
+    .myPage .podHeader .sapMLabel .whiteText {
+        color: white;
+    }
+    .myPage .sapUiMediumMarginEnd {
+        margin-right: 1rem !important;
+    }
+}
+
+
+.myPage .titleMargin
+{
+    margin-left: 7rem !important;
+}
+
+.sapMLabel.blackText{
+    color: black;
+    font-size: 0.8rem;
+}
+
+.sapMText.blackText{
+    color: black;
+    font-size: 0.8rem;
+}
+
+.sapMLIB{
+    height:2rem;
+}
+
+.scrollabley{
+    overflow-y: auto;
+}
+
+.noscrollabley{
+    overflow-y: hidden;
+}
+
+.textAlignRight {
+  text-align: right !important;
+}
+
+.zeroSettantacinque {
+  font-size: 0.75rem !important;
+}
+
+.sapMObjStatusIcon>.sapUiIcon {
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+  width: 2.375rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  max-height: 2.375rem;
+}
+
+.sapUiTableCell .sapUiIcon {
+  font-size: 2rem;
+}
+
+.myPage * {
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.myPage .tmpBorder {
+  border-width: 1px;
+}
+
+.myPage .toolBar {
+  border-bottom-width: thin;
+  border-bottom-style: inset;
+  border-bottom-color: lightgray;
+  border-top-width: thin;
+  border-top-style: inset;
+  border-top-color: lightgray;
+}
+
+.myPage .DLLogo {
+  display: inline-block;
+  margin-right: 38px;
+  margin-left: 38px;
+  padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+
+.myPage .sapMLabel {
+  font-size: 1.1rem;
+}
+
+.myPage .sapMLabel .whiteText {
+  color: white;
+}
+
+.myPage .sapMLabel .blackText {
+  color: black;
+}
+
+.myPage .sapMText {
+  font-size: 1.4rem;
+}
+
+.myPage .sapMText .blackText {
+  color: black;
+}
+
+.myPage .sapMListTbl .sapMText {
+  color: black;
+}
+
+.myPage .sapMTitleStyleAuto {
+  font-size: 2rem;
+}
+
+.myDialog .sapMLabel {
+  font-size: 1.6rem;
+}
+
+.myDialog .sapMLabel.whiteText {
+  color: white;
+}
+
+.myDialog .sapMLabel.blackText {
+  color: black;
+}
+
+.myDialog .sapMText {
+  font-size: 2.0rem;
+  color: black;
+}
+
+.myDialog .sapMFooter-CTX .sapMBtn .sapMBtnContent {
+  font-size: 2.0rem;
+}
+
+.myMessageDialog {
+  font-size: 1.7rem
+}
+
+@media screen and (max-width: 1450px) {
+  .myPage .podHeader .sapMLabel {
+    font-size: 1.2rem;
+  }
+
+  .myPage .podHeader .sapMLabel .whiteText {
+    color: white;
+  }
+
+  .myPage .sapUiMediumMarginEnd {
+    margin-right: 1rem !important;
+  }
+}
+
+.myPage .titleMargin {
+  margin-left: 7rem !important;
+}
+
+.myPage .sapMITBTab {
+  width: 7rem;
+}
+
+.myPage .sapMITBFilter .sapMITBText {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sapMLabel.blackText {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.sapMText.blackText {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.sapMText.blackText075 {
+  color: black;
+  font-size: 0.75rem;
+}
+
+.sapMLIB {
+  height: 2rem;
+}
+
+.scrollabley {
+  overflow-y: auto;
+}
+
+.noscrollabley {
+  overflow-y: hidden;
+}
+
+.sapMObjStatusIcon>.sapUiIcon {
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+  width: 2.375rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  max-height: 2.375rem;
+}
+
+.sapUiSelectable {
+  -moz-box-align: text;
+  -webkit-user-select: text;
+  user-select: text !important;
+  -webkit-touch-callout: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+.sapMITBFilter .sapMITBCount {
+  max-width: 5rem;
+  font-size: 0.6rem;
+  margin-left: -1rem;
+  background-color: #def0f2;
+}
+
+.sapUiTableCell .sapUiIcon {
+  font-size: 2rem;
+}
+
+.sapMLIB3rem {
+  height: 3rem;
+}
+
+.qtyButton .sapMBtnInner {
+  font-size: x-large !important;
+}
+
+.sapMRbB .sapMRbBOut {
+	height: 2em;
+	width: 2em;
+	border-radius: 2em;
+	margin: 0.5em;
+}
+
+.sapMRbB .sapMRbBInn {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.heightWebkitFillAvailable {
+       height: 85vh;
+    margin-bottom: 3rem;
+}
+
+.heightWebkitFillAvailable .sapMVBox > .sapMFlexItem {
+      height: 85vh;
+  margin-bottom: 3rem;
+}
+
+.vboxTotal {
+  padding: 1rem;
+}
+
+.hboxHeader {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.hboxAddCheck {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*per larghezza campi select (secondo valore)*/
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell {
+    width: 60%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* icone row action of table */
+.classTable .sapUiTableCell .sapUiIcon {
+    font-size: 1.3rem;
+}
